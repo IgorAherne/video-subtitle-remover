@@ -29,6 +29,9 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 
+venv/*
+tools/python-3.8.0-embed-amd64/*
+
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
