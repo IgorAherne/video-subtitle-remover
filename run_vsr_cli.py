@@ -9,6 +9,7 @@ import os
 import sys
 import time
 from pathlib import Path
+from typing import Tuple, Union
 
 # --- Crucial: Ensure 'backend' can be imported ---
 # Add the directory containing this script (which should be the root of
@@ -32,7 +33,8 @@ except Exception as e:
     print(f"ERROR: An unexpected error occurred during VSR import: {e}", file=sys.stderr)
     sys.exit(1)
 
-def parse_area(area_str: str) -> tuple[int, int, int, int] | None:
+
+def parse_area(area_str: str) -> Union[Tuple[int, int, int, int], None]:
     """Parses the area string "ymin,ymax,xmin,xmax" into a tuple."""
     try:
         parts = [int(p.strip()) for p in area_str.split(',')]
